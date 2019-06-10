@@ -1,0 +1,6 @@
+PyYAML>=5.1
+Flask>=1.0.2
+Flask-Cors>=3.0.7
+python-magic>=0.4.15
+PyMySQL>=0.9.3
+gunicorn==19.9.0
