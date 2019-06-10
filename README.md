@@ -18,7 +18,7 @@ A lightweight, convenient personal network disk.
 - [x] 流式下载文件
 - [X] 移动端布局适配
 - [x] 好看的页面和交互效果(大雾
-- [x] 提供了 mysql 和 纯 json 两种新式的存储方式供用户选择
+- [x] 提供了 mysql 和 纯 json 两种形式的存储方式供用户选择
 - [ ] 针对媒体,文本文件的弹窗显示
 
 ## 如何部署：
