@@ -14,6 +14,8 @@ if dataMapsd["configuration"]["Storage"] == "mysql":
         sql = "CREATE DATABASE IF NOT EXISTS jncloud"
         cursor.execute(sql)
         print("Database created")
+        sql23 = "USE jncloud"
+        cursor.execute(sql23)
         sql_2 = '''CREATE TABLE IF NOT EXISTS `tuchuan` (
         `id` INT NOT NULL AUTO_INCREMENT,
         `md5` VARCHAR(255) NOT NULL,
