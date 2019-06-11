@@ -5,14 +5,15 @@ ADD . /app
 WORKDIR /app
 EXPOSE 80
 
-ENV DRIVER=json \
-    MYSQL_HOST= \
-    MYSQL_USER= \
+ENV NAME=橘年图床  \
+    DRIVER=json   \
+    MYSQL_HOST=   \
+    MYSQL_USER=   \
     MYSQL_PASSWD= \
     MYSQL_POR=
 
-RUN apk add --no-cache py3-pip py3-gevent libmagic \
-                                          gettext  \
+RUN apk add --no-cache py3-pip py3-gevent libmagic   \
+                                          gettext    \
                                           libintl && \
     cp  /usr/bin/envsubst  /usr/local/bin/        && \
     pip3 install --upgrade --no-cache-dir pip     && \
