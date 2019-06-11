@@ -2,8 +2,8 @@
 
 import pymysql
 import yaml
-with open("configuration.yaml", "r") as f:
-    dataMapsd = yaml.safe_load(f.read().encode('utf8'))
+with open("configuration.yaml", "r", encoding="utf-8") as f:
+    dataMapsd = yaml.safe_load(f)
 
 if dataMapsd["configuration"]["Storage"] == "mysql":
     try:
