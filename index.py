@@ -106,7 +106,9 @@ def tclist():
             curxsd.close()
         else:
             with open("filelist.json", 'r') as f:
-                datasds = json.load(f)[int(request.args.get("offset")):int(request.args.get("offset"))+int(request.args.get("limit"))]
+                xsdawe = json.load(f)
+                xsdawe.reverse()
+                datasds = xsdawe[int(request.args.get("offset")):int(request.args.get("offset"))+int(request.args.get("limit"))]
                 print(datasds)
         sdwewqrt = []
         for ix in datasds:
