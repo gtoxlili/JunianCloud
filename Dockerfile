@@ -11,7 +11,7 @@ ENV NAME=橘年图床  \
     MYSQL_USER=   \
     MYSQL_PASSWD= \
     MYSQL_PORT=   \
-    MAXSIZE=
+    MAXSIZE=100
 
 RUN apk add --no-cache py3-pip py3-gevent libmagic   \
                                           gettext    \
