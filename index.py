@@ -6,7 +6,7 @@ import os
 import yaml
 
 with open("configuration.yaml", "r") as f:
-    dataMapsd = yaml.load(f.read().encode('gbk'))
+    dataMapsd = yaml.safe_load(f.read().encode('utf8'))
 
 
 app = Flask(__name__)
