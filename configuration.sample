@@ -9,7 +9,7 @@ configuration:
     user: ${MYSQL_USER}
     passwd: ${MYSQL_PASSWD}
     port: ${MYSQL_PORT}
-  maxsize: 100 # Max size allowed for upload (mb)
+  maxsize: ${MAXSIZE} # Max size allowed for upload (mb)
   type: # type of upload allowed 
     - ai
     - apk
