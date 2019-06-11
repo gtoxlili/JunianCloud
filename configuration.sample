@@ -3,12 +3,12 @@
 configuration:
   languages: zh-ch # temporarily does not support i18n
   name: 橘年图床 # Cloud name
-  Storage: json # Storage method ( mysql or json )
+  Storage: ${DRIVER} # Storage method ( mysql or json )
   mysql: # if you already have mysql installed and have chosen it
-    host: MYSQL_HOST
-    user: MYSQL_USER
-    passwd: MYSQL_PASSWD
-    port: MYSQL_PORT
+    host: ${MYSQL_HOST}
+    user: ${MYSQL_USER}
+    passwd: ${MYSQL_PASSWD}
+    port: ${MYSQL_PORT}
   maxsize: 100 # Max size allowed for upload (mb)
   type: # type of upload allowed 
     - ai
