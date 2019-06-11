@@ -15,7 +15,7 @@ if dataMapsd["configuration"]["Storage"] == "mysql":
     import pymysql
     ismysql = True
     connsx = pymysql.connect(host=dataMapsd["configuration"]["mysql"]["host"], user=dataMapsd["configuration"]["mysql"]["user"], passwd=dataMapsd["configuration"]["mysql"]["passwd"], db='jncloud',
-                             port=dataMapsd["configuration"]["mysql"]["port"], charset='utf8',  db='jncloud',autocommit=True, cursorclass=pymysql.cursors.DictCursor)
+                             port=dataMapsd["configuration"]["mysql"]["port"], charset='utf8' ,autocommit=True, cursorclass=pymysql.cursors.DictCursor)
 else:
     import json
     ismysql = False
