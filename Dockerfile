@@ -13,12 +13,14 @@ ENV NAME=橘年图床  \
     MYSQL_PORT=   \
     MAXSIZE=100
 
+RUN sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories
+    
 RUN apk add --no-cache py3-pip py3-gevent libmagic   \
                                           gettext    \
                                           libintl && \
     cp  /usr/bin/envsubst  /usr/local/bin/        && \
-    pip3 install --upgrade --no-cache-dir pip     && \
-    pip3 install --no-cache-dir -r requirements.* && \
+    pip3 install --upgrade --no-cache-dir pip -i https://pypi.douban.com/simple  && \
+    pip3 install --no-cache-dir -r requirements.* -i https://pypi.douban.com/simple && \
     apk del --purge gettext && mkdir -p uploads
 
 CMD envsubst < configuration.sample > configuration.yaml && \
