@@ -55,7 +55,7 @@ def uploaded_file(filename):
             if i["name"] == filename:
                 store_path = 'uploads/'+i["md5"]
                 break
-        makediv = data[0]["md5"]
+        makediv = data["md5"]
     minetpye = magic.from_file(store_path, mime=True)
     if "video" in minetpye and (not request.args.get("download")):
         response = make_response(send_from_directory('uploads',
