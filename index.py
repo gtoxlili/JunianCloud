@@ -47,6 +47,7 @@ def uploaded_file(filename):
         data = cur.fetchall()
         cur.close()
         store_path = 'uploads/'+data[0]["md5"]
+        makediv = data[0]["md5"]
     else:
         with open("filelist.json", 'r') as f:
             cur = json.load(f)
@@ -54,10 +55,11 @@ def uploaded_file(filename):
             if i["name"] == filename:
                 store_path = 'uploads/'+i["md5"]
                 break
+        makediv = data[0]["md5"]
     minetpye = magic.from_file(store_path, mime=True)
     if "video" in minetpye and (not request.args.get("download")):
         response = make_response(send_from_directory('uploads',
-                                                     data[0]["md5"]))
+                                                     makediv))
     else:
         def send_chunk():
             with open(store_path, 'rb') as target_file:
